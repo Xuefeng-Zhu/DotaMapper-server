@@ -12,9 +12,9 @@ app.use(function(req, res, next) {
  });
 
  app.get('/match/:matchID', function(req, res, next){
- 	request(matchAPI + "?key=" + key + "&match_id=" + req.params.matchID,
+ 	request(matchAPI + "?key=" + key + "&match_id=" + req.params.matchID + "&format=json",
  	function(error, response, body){
- 		res.send(body.replace(/\"/g, ''));
+ 		res.send(body);
  	})
  });
 
