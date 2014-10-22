@@ -1,3 +1,6 @@
+var matchAPI = "https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/";
+var key = "E2469B841908CBF830EC652B7BAB5D71";
+
 var express = require('express');
 var request = require('request');
 var app = express();
@@ -8,9 +11,9 @@ app.use(function(req, res, next) {
   next();
  });
 
- app.get('/image/:item', function(req, res, next){
- 	var item = req.params.item.replace(' ', '+');
- 	request('http://api.duckduckgo.com/?q=' + item + '&format=json&pretty=1', function(error, response, body){
+ app.get('/match/:matchID', function(req, res, next){
+ 	request(matchAPI + "?key=" + key + "&match_id=" + req.params.matchID,
+ 	function(error, response, body){
  		res.send(body);
  	})
  });

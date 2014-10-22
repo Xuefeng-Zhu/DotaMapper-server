@@ -1,5 +1,5 @@
 {
-    "name": "IWana-server",
+    "name": "DotaMapper-server",
     "version": "0.0.0",
     "description": "",
     "main": "index.js",
@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Xuefeng-Zhu/IWana-server.git"
+        "url": "https://github.com/Xuefeng-Zhu/DotaMapper-server.git"
     },
     "author": "",
     "license": "ISC",
