@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
  app.get('/match/:matchID', function(req, res, next){
  	request(matchAPI + "?key=" + key + "&match_id=" + req.params.matchID,
  	function(error, response, body){
- 		res.send(body);
+ 		res.send(body.replace(/\"/g, ''));
  	})
  });
 
